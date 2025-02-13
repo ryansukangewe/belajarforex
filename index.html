@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Forex</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            flex: 1;
+            margin-top: 30px;
+        }
+        .card {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            background-color: #c54697;
+            color: white;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+        .dark-mode {
+            background-color: #212529;
+            color: white;
+        }
+        .dark-mode .card {
+            background-color: #343a40;
+            color: white;
+        }
+        .dark-mode .card:hover {
+            background-color: #c54697;
+        }
+        .dark-mode footer {
+            background-color: #000;
+        }
+        .chart-container {
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Forex Pemula</a>
+            <!-- Menu Grafik Forex -->
+            <a class="btn btn-outline-light ms-2" href="grafik-forex.html">Grafik Forex</a>
+        </div>
+    </nav>
+
+
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carousel Interaktif Forex</title>
+        <!-- Menyertakan Font Awesome untuk ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+           <style>
+    /* Tombol sebelumnya dengan ikon panah */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background: none; /* Menghapus background default */
+        color: #007bff; /* Mengatur warna ikon panah */
+        font-size: 30px; /* Ukuran ikon */
+    }
+
+    /* Menambahkan panah ke dalam tombol */
+    .carousel-control-prev-icon::before {
+        content: '\f104'; /* Unicode untuk panah kiri */
+        font-family: 'Font Awesome 5 Free'; 
+        font-weight: 900;
+    }
+
+    .carousel-control-next-icon::before {
+        content: '\f105'; /* Unicode untuk panah kanan */
+        font-family: 'Font Awesome 5 Free'; 
+        font-weight: 900;
+    }
+
+    /* Menambahkan efek hover */
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        color: #0056b3; /* Ganti warna ikon saat hover */
+    }
+
+    /* Responsif untuk ukuran layar kecil */
+    @media (max-width: 576px) {
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            font-size: 24px;
+        }
+    }
+</style>
+
+
+</style>
+
+    </head>
+    <body>
+        <div id="forexCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 hingga 5 -->
+                <div class="carousel-item active" onclick="showAlert('Apa Itu Forex?')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Apa Itu Forex?</h5>
+                            <p class="card-text">Forex adalah pasar global untuk transaksi mata uang yang memungkinkan individu dan institusi untuk membeli, menjual, atau menukar mata uang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Analisis Fundamental')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Analisis Fundamental</h5>
+                            <p class="card-text">Melibatkan evaluasi faktor ekonomi, sosial, dan politik yang mempengaruhi nilai mata uang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Analisis Teknikal')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Analisis Teknikal</h5>
+                            <p class="card-text">Analisis menggunakan grafik dan indikator untuk memprediksi pergerakan harga masa depan berdasarkan data historis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Manajemen Risiko')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Manajemen Risiko</h5>
+                            <p class="card-text">Strategi untuk mengelola dan meminimalkan potensi kerugian dalam trading.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Strategi Trading Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Strategi Trading Forex</h5>
+                            <p class="card-text">Beberapa strategi populer termasuk day trading, scalping, dan swing trading.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 hingga 35 -->
+                <div class="carousel-item" onclick="showAlert('Leverage dalam Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Leverage dalam Forex</h5>
+                            <p class="card-text">Leverage memungkinkan trader untuk mengendalikan posisi lebih besar dengan modal yang lebih kecil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Margin Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Margin Trading</h5>
+                            <p class="card-text">Penggunaan dana pinjaman untuk meningkatkan potensi keuntungan dalam trading forex.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Pips dalam Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Pips dalam Forex</h5>
+                            <p class="card-text">Pip adalah unit ukuran untuk pergerakan harga dalam pasar forex. Biasanya digunakan untuk menghitung perubahan nilai pasangan mata uang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Spread dalam Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Spread dalam Forex</h5>
+                            <p class="card-text">Spread adalah selisih antara harga beli dan jual suatu pasangan mata uang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Stop Loss dan Take Profit')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Stop Loss dan Take Profit</h5>
+                            <p class="card-text">Strategi untuk mengatur batas kerugian (Stop Loss) dan target keuntungan (Take Profit) dalam setiap transaksi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Jenis Pasangan Mata Uang')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Jenis Pasangan Mata Uang</h5>
+                            <p class="card-text">Pasangan mata uang utama, sekunder, dan eksotis—memengaruhi likuiditas dan volatilitas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Indikator Teknikal Populer')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Indikator Teknikal Populer</h5>
+                            <p class="card-text">Moving Average, RSI, MACD, dan Bollinger Bands adalah indikator populer dalam analisis teknikal.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Analisis Sentimen')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Analisis Sentimen</h5>
+                            <p class="card-text">Menganalisis perasaan pasar terhadap suatu aset atau pasangan mata uang, membantu menentukan arah tren.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Volume dalam Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Volume dalam Forex</h5>
+                            <p class="card-text">Volume trading menunjukkan jumlah transaksi yang dilakukan dalam periode waktu tertentu. Ini memberikan gambaran tentang kekuatan pasar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Kelebihan dan Kekurangan Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Kelebihan dan Kekurangan Forex</h5>
+                            <p class="card-text">Kelebihan: Pasar likuid, akses 24 jam. Kekurangan: Volatilitas tinggi, risiko kerugian besar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Psychology of Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Psychology of Trading</h5>
+                            <p class="card-text">Emosi seperti keserakahan dan ketakutan dapat mempengaruhi keputusan trading, penting untuk tetap tenang dan disiplin.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Tips Memulai Trading Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Tips Memulai Trading Forex</h5>
+                            <p class="card-text">Mulailah dengan akun demo, pahami manajemen risiko, dan jangan pernah trading lebih dari yang Anda mampu rugikan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Pengaruh Berita Ekonomi')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Pengaruh Berita Ekonomi</h5>
+                            <p class="card-text">Berita ekonomi seperti laporan NFP dan perubahan suku bunga dapat menyebabkan fluktuasi harga mata uang yang signifikan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Robot Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Robot Trading</h5>
+                            <p class="card-text">Robot trading adalah perangkat otomatis yang mengeksekusi trade berdasarkan algoritma tertentu. Berguna untuk mereka yang tidak dapat memonitor pasar terus-menerus.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Penggunaan Akun Demo')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Penggunaan Akun Demo</h5>
+                            <p class="card-text">Akun demo memungkinkan trader pemula berlatih trading tanpa risiko kehilangan uang sungguhan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Waktu Terbaik untuk Trading Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Waktu Terbaik untuk Trading Forex</h5>
+                            <p class="card-text">Waktu terbaik untuk trading adalah saat pasar aktif, biasanya saat sesi London dan New York terbuka.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Tips untuk Menghindari Kerugian')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Tips untuk Menghindari Kerugian</h5>
+                            <p class="card-text">Tetapkan batasan kerugian, diversifikasi portofolio, dan gunakan strategi yang sesuai dengan gaya trading Anda.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Peran Broker dalam Forex')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Peran Broker dalam Forex</h5>
+                            <p class="card-text">Broker bertindak sebagai perantara antara trader dan pasar, menyediakan platform untuk melakukan transaksi.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Kalkulasi Keuntungan dan Kerugian')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Kalkulasi Keuntungan dan Kerugian</h5>
+                            <p class="card-text">Keuntungan dan kerugian dihitung berdasarkan pergerakan pip dan ukuran posisi yang Anda ambil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Strategi Swing Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Strategi Swing Trading</h5>
+                            <p class="card-text">Swing trading berfokus pada pergerakan harga jangka menengah dan memanfaatkan pola harga yang muncul di pasar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Day Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Day Trading</h5>
+                            <p class="card-text">Day trading adalah strategi yang mengharuskan trader untuk membuka dan menutup posisi dalam satu hari perdagangan.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Scalping')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Scalping</h5>
+                            <p class="card-text">Scalping adalah teknik trading jangka pendek yang bertujuan untuk mendapatkan keuntungan kecil dari pergerakan harga kecil.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Long Term Trading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Long Term Trading</h5>
+                            <p class="card-text">Long term trading adalah strategi investasi yang memanfaatkan pergerakan harga dalam jangka waktu panjang.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Kapan Mengambil Keuntungan?')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Kapan Mengambil Keuntungan?</h5>
+                            <p class="card-text">Menentukan waktu yang tepat untuk mengambil keuntungan tergantung pada strategi trading Anda dan pergerakan pasar.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item" onclick="showAlert('Menghindari Overtrading')">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Menghindari Overtrading</h5>
+                            <p class="card-text">Overtrading dapat menguras modal Anda. Tetapkan batasan dan disiplin untuk menghindari kehilangan lebih banyak uang.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#forexCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Sebelumnya</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#forexCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Berikutnya</span>
+            </button>
+        </div>
+    
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+        <script>
+            function showAlert(topic) {
+                alert('Anda mengklik: ' + topic);
+            }
+        </script>
+    </body>
+    </html>
+    
+
+
+
+
+
+
+
+
+    <div class="container">
+        <h1 class="text-center my-4">Materi Forex</h1>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='analisis-fundamental.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Analisis Fundamental</h5>
+                        <p class="card-text">Memahami faktor ekonomi yang mempengaruhi pasar forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='analisis-teknikal.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Analisis Teknikal</h5>
+                        <p class="card-text">Belajar membaca grafik dan indikator teknikal.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='apa-itu-forex.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Apa Itu Forex?</h5>
+                        <p class="card-text">Penjelasan dasar tentang forex dan bagaimana cara kerjanya.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='apa-itu-pips.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Apa Itu Pips?</h5>
+                        <p class="card-text">Mengenal satuan pergerakan harga dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='jenis-order.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Jenis Order</h5>
+                        <p class="card-text">Memahami berbagai jenis order dalam trading forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='lot-dan-leverage.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Lot dan Leverage</h5>
+                        <p class="card-text">Penjelasan tentang ukuran trading dan penggunaan leverage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='manajemen-risiko.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Manajemen Risiko</h5>
+                        <p class="card-text">Strategi untuk mengelola risiko dalam trading forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='psikologi-trading.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Psikologi Trading</h5>
+                        <p class="card-text">Mengendalikan emosi dan psikologi dalam trading.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='support-dan-resistance.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Support dan Resistance</h5>
+                        <p class="card-text">Memahami level support dan resistance dalam analisis teknikal forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='trading-plan.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Trading Plan</h5>
+                        <p class="card-text">Menyusun rencana trading yang efektif untuk mencapai tujuan dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='rsi.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">RSI (Relative Strength Index)</h5>
+                        <p class="card-text">Memahami indikator RSI untuk mengidentifikasi kondisi overbought dan oversold dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='ma.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Moving Average (MA)</h5>
+                        <p class="card-text">Memahami indikator Moving Average untuk menganalisis tren harga dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='bollinger.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Bollinger Bands</h5>
+                        <p class="card-text">Memahami indikator Bollinger Bands untuk menganalisis volatilitas dan kondisi pasar dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='macd.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">MACD (Moving Average Convergence Divergence)</h5>
+                        <p class="card-text">Memahami indikator MACD untuk mengidentifikasi perubahan tren dan momentum dalam forex.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='mt5.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">MetaTrader 5 (MT5)</h5>
+                        <p class="card-text">Memahami platform MetaTrader 5 untuk melakukan analisis teknikal dan trading forex.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 30 more cards -->
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='candlestick.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Candlestick Patterns</h5>
+                        <p class="card-text">Mengenal pola candlestick untuk memprediksi pergerakan harga di pasar forex.</p>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='fibonacci.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Fibonacci Retracement</h5>
+                        <p class="card-text">Menggunakan level Fibonacci untuk mengidentifikasi potensi support dan resistance.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='trend-lines.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Trend Lines</h5>
+                        <p class="card-text">Menarik garis tren untuk memprediksi arah pergerakan harga di pasar forex.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='volume-analysis.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Volume Analysis</h5>
+                        <p class="card-text">Menganalisis volume trading untuk memahami kekuatan tren pasar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card" onclick="location.href='tentang-forex.html';">
+                    <div class="card-body">
+                        <h5 class="card-title">Tahap Belajar Forex</h5>
+                        <p class="card-text">Pelajari langkah-langkah dasar dalam memahami trading forex.</p>
+                    </div>
+                </div>
+            </div>
+            
+       
+
+
+
+        </div>
+    </div>
+    
+    
+
+
+    <footer>
+        <button class="btn btn-outline-light" onclick="toggleDarkMode()">🌙</button>
+        <p>&copy; 2025 Belajar Forex - Semua Hak Dilindungi</p>
+        <div id="clock"></div>
+    </footer>
+
+    
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            let mode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+            localStorage.setItem('mode', mode);
+        }
+        
+        window.onload = function() {
+            if (localStorage.getItem('mode') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+
+            // Format waktu menjadi dua digit
+            hours = hours % 12;
+            hours = hours ? hours : 12;
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            seconds = seconds < 10 ? '0' + seconds : seconds;
+
+            var timeStr = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+
+            document.getElementById('clock').textContent = timeStr;
+        }
+
+        // Update jam setiap detik
+        setInterval(updateClock, 1000);
+
+        // Jalankan update jam saat halaman dimuat
+        updateClock();
+
+
+    </script>
+
+    
+</body>
+</html>
+
+
